@@ -23,97 +23,37 @@ jobs:
         with:
           args: --strict
         env:
-          
           DIFF_BASE: ${{ github.base_ref }}
-          
-
-  
-
-  
   iOS:
-    
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.runsOn }}
-    
     env:
-      
       DEVELOPER_DIR: "/Applications/${{ matrix.xcode }}.app/Contents/Developer"
-      
     timeout-minutes: 20
     strategy:
       fail-fast: false
       matrix:
         include:
-          - destination: "OS=17.0.1,name=iPhone 14 Pro"
-            name: "iOS 17.0.1"
-            xcode: "Xcode_15.0"
-            runsOn: macos-13
-          - destination: "OS=16.4,name=iPhone 14 Pro"
-            name: "iOS 16.4"
-            xcode: "Xcode_14.3.1"
-            runsOn: macos-13
+          - destination: "OS=18.1,name=iPhone 16 Pro"
+            name: "iOS 18.1"
+            xcode: "Xcode_16.1"
+            runsOn: macOS-14
+          - destination: "OS=18.0,name=iPhone 16 Pro"
+            name: "iOS 18.0"
+            xcode: "Xcode_16.0"
+            runsOn: macOS-14
     steps:
       - uses: actions/checkout@v3
-        
       - name: ${{ matrix.name }}
-        run: xcodebuild test -scheme "{{ cookiecutter.name }}" -destination "${{ matrix.destination }}" clean -enableCodeCoverage YES -resultBundlePath "test_output/${{ matrix.name }}.xcresult" || exit 1
-        
+        run: xcodebuild test -scheme "flex-ui" -destination "${{ matrix.destination }}" clean -enableCodeCoverage YES -resultBundlePath "test_output/${{ matrix.name }}.xcresult" || exit 1
       - uses: actions/upload-artifact@v4
         with:
-          
           name: ${{ matrix.name }}
           path: test_output
-          
-  
-
-  
-
-  
-
-  spm:
-    
-    name: ${{ matrix.name }}
-    runs-on: ${{ matrix.runsOn }}
-    
-    env:
-      
-      DEVELOPER_DIR: "/Applications/${{ matrix.xcode }}.app/Contents/Developer"
-      
-    timeout-minutes: 20
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - name: "Xcode 15"
-            xcode: "Xcode_15.0"
-            runsOn: macos-13
-          - name: "Xcode 14"
-            xcode: "Xcode_14.3.1"
-            runsOn: macos-13
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: ${{ matrix.name }}
-        run: swift build -c release --target "{{ cookiecutter.name }}"
-      
-  merge-test-reports:
-    needs: [iOS, macOS, watchOS, tvOS]
-    runs-on: macos-13
-    steps:
-      - name: Download artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: test_output
-      - run: xcrun xcresulttool merge test_output/**/*.xcresult --output-path test_output/final/final.xcresult
-      - name: Upload Merged Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: MergedResult
-          path: test_output/final
 
   discover-typos:
     name: Discover Typos
-    runs-on: macOS-12
+    runs-on: macOS-13
     env:
       DEVELOPER_DIR: /Applications/Xcode_14.1.app/Contents/Developer
     steps:

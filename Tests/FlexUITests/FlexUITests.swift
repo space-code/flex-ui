@@ -5,4 +5,4 @@
 
 import XCTest
 
-final class flex - uiTests: XCTestCase {}
+final class FlexUITests: XCTestCase {}

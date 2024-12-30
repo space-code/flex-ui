@@ -5,13 +5,6 @@
 <a href="https://swiftpackageindex.com/space-code/flex-ui"><img alt="Swift Compatibility" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fspace-code%2Fflex-ui%2Fbadge%3Ftype%3Dswift-versions"/></a> 
 <a href="https://swiftpackageindex.com/space-code/flex-ui"><img alt="Platform Compatibility" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fspace-code%2Fflex-ui%2Fbadge%3Ftype%3Dplatforms"/></a> 
 <a href="https://github.com/space-code/flex-ui"><img alt="CI" src="https://github.com/space-code/flex-ui/actions/workflows/ci.yml/badge.svg?branch=main"></a>
-
-<a href="https://github.com/space-code/flex-ui"><img alt="Number of GitHub contributors" src="https://img.shields.io/github/issues/space-code/flex-ui"></a>
-<a href="https://github.com/space-code/flex-ui"><img alt="Number of GitHub issues that are open" src="https://img.shields.io/github/stars/space-code/flex-ui"></a>
-<a href="https://github.com/space-code/flex-ui"><img alt="Number of GitHub closed issues" src="https://img.shields.io/github/issues-closed/space-code/flex-ui"></a>
-<a href="https://github.com/space-code/flex-ui"><img alt="Number of GitHub stars" src="https://img.shields.io/github/contributors/space-code/flex-ui"></a>
-<a href="https://github.com/space-code/flex-ui"><img alt="Number of GitHub pull requests that are open" src="https://img.shields.io/github/issues-pr-raw/space-code/flex-ui"></a>
-
 <a href="https://github.com/space-code/flex-ui"><img alt="GitHub release; latest by date" src="https://img.shields.io/github/v/release/space-code/flex-ui"></a>
 <a href="https://github.com/apple/swift-package-manager" alt="flex-ui on Swift Package Manager" title="flex-ui on Swift Package Manager"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" /></a>
 </p>
