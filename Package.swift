@@ -5,20 +5,13 @@ import PackageDescription
 
 let package = Package(
     name: "flex-ui",
+    defaultLocalization: "en",
+    platforms: [.iOS(.v14)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "flex-ui",
-            targets: ["flex-ui"]),
+        .library(name: "FlexUI", targets: ["FlexUI"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "flex-ui"),
-        .testTarget(
-            name: "flex-uiTests",
-            dependencies: ["flex-ui"]
-        ),
+        .target(name: "FlexUI"),
+        .testTarget(name: "FlexUITests", dependencies: ["FlexUI"]),
     ]
 )
