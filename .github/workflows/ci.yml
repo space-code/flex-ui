@@ -17,7 +17,7 @@ jobs:
   SwiftLint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: GitHub Action for SwiftLint
         uses: norio-nomura/action-swiftlint@3.2.1
         with:
@@ -43,7 +43,7 @@ jobs:
             xcode: "Xcode_16.0"
             runsOn: macOS-14
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: ${{ matrix.name }}
         run: xcodebuild test -scheme "flex-ui" -destination "${{ matrix.destination }}" clean -enableCodeCoverage YES -resultBundlePath "test_output/${{ matrix.name }}.xcresult" || exit 1
       - uses: actions/upload-artifact@v4
@@ -57,7 +57,7 @@ jobs:
     env:
       DEVELOPER_DIR: /Applications/Xcode_14.1.app/Contents/Developer
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Discover typos
         run: |
           export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.11/bin"
