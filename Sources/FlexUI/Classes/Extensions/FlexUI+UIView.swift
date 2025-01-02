@@ -128,4 +128,16 @@ public extension FlexUI where Component: UIView {
         component.isHidden = isHidden
         return self
     }
+
+    /// Sets the transparency of the component.
+    /// - Parameter alpha: A `CGFloat` value between 0.0 (completely transparent) and 1.0 (completely opaque).
+    /// - Returns: The modified instance of `Self` to allow method chaining.
+    /// - Note: The `@discardableResult` attribute allows ignoring the returned value.
+    ///         The `@MainActor` attribute ensures the method runs on the main thread.
+    @discardableResult
+    @MainActor
+    func alpha(_ alpha: CGFloat) -> Self {
+        component.alpha = alpha
+        return self
+    }
 }
