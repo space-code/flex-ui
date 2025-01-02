@@ -104,4 +104,16 @@ public extension FlexUI where Component: UIView {
         component.layer.transform = transform
         return self
     }
+
+    /// Sets the visibility of the component.
+    /// - Parameter isHidden: A Boolean value that determines whether the component is hidden.
+    /// - Returns: The modified instance of `Self` to allow method chaining.
+    /// - Note: The `@discardableResult` attribute allows ignoring the returned value.
+    ///         The `@MainActor` attribute ensures the method runs on the main thread.
+    @discardableResult
+    @MainActor
+    func isHidden(_ isHidden: Bool) -> Self {
+        component.isHidden = isHidden
+        return self
+    }
 }
