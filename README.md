@@ -10,7 +10,7 @@
 </p>
 
 ## Description
-`flex-ui` description.
+`flex-ui` is a small tool that helps chain UI configurations.
 
 - [Usage](#usage)
 - [Requirements](#requirements)
@@ -22,7 +22,62 @@
 
 ## Usage
 
+```swift
+import FlexUI
+
+let label = UILabel()
+        
+label
+    .flex
+    .text("Label Text")
+    .textColor(.black)
+    .font(.systemFont(ofSize: 17.0))
+```
+
+New configuration methods can be added by extending the interface of the Flex component, such as:
+
+```swift
+import FlexUI
+import UIKit
+
+public enum Fonts {
+    public enum Headings {
+        /// The largest heading style.
+        case h1
+
+        /// A slightly smaller heading style.
+        case h2
+
+        /// A medium-sized heading style.
+        case h3
+
+        var font: UIFont {
+            /// Implementation to return a specific UIFont based on the heading style.
+        }
+    }
+}
+
+public extension FlexUI where Component: UIButton {
+    @discardableResult
+    @MainActor
+    func font(_ heading: Fonts.Headings) -> Self {
+        component.titleLabel?.font = heading.font
+        return self
+    }
+}
+
+let button = UIButton()
+
+button
+    .flex
+    .font(.h3)
+```
+
 ## Requirements
+
+- iOS 14.0+
+- Xcode 16.0
+- Swift 6.0
 
 ## Installation
 ### Swift Package Manager
