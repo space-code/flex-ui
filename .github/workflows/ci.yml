@@ -38,10 +38,6 @@ jobs:
             name: "iOS 18.1"
             xcode: "Xcode_16.1"
             runsOn: macOS-14
-          - destination: "OS=18.0,name=iPhone 16 Pro"
-            name: "iOS 18.0"
-            xcode: "Xcode_16.0"
-            runsOn: macOS-14
     steps:
       - uses: actions/checkout@v4
       - name: ${{ matrix.name }}
