@@ -1,41 +1,11 @@
 //
 // flex-ui
-// Copyright © 2024 Space Code. All rights reserved.
+// Copyright © 2025 Space Code. All rights reserved.
 //
 
 import UIKit
 
-// MARK: - ButtonCommand
-
-/// A private class that wraps a closure to be executed as an action for a `UIButton`.
-/// This class allows associating arbitrary closure actions with buttons, and is used internally
-/// to manage custom button actions in the `FlexUI` extension.
-private final class ButtonCommand {
-    // MARK: Properties
-
-    /// The closure that will be executed when the button action is triggered.
-    let block: () -> Void
-
-    // MARK: Initialization
-
-    /// Initializes a new instance of `ButtonCommand` with the provided closure.
-    ///
-    /// - Parameter block: The closure to be executed when the button is tapped.
-    init(block: @escaping () -> Void) {
-        self.block = block
-    }
-
-    // MARK: Actions
-
-    /// The action method that is triggered when the associated button's event occurs.
-    /// It executes the stored closure.
-    @objc
-    func action() {
-        block()
-    }
-}
-
-@MainActor private let kMapTable = NSMapTable<AnyObject, ButtonCommand>.weakToStrongObjects()
+@MainActor private let kMapTable = NSMapTable<AnyObject, Command>.weakToStrongObjects()
 
 /// An extension to `FlexUI` that adds helper methods for configuring `UIButton` properties.
 /// These methods allow for fluent configuration of button properties such as title, image, alignment, and actions.
@@ -251,7 +221,7 @@ public extension FlexUI where Component: UIButton {
             return self
         }
 
-        let buttonCommand = ButtonCommand(block: command)
+        let buttonCommand = Command(block: command)
         component.removeTarget(nil, action: nil, for: event)
         component.addTarget(buttonCommand, action: #selector(buttonCommand.action), for: event)
         kMapTable.setObject(buttonCommand, forKey: component)
@@ -271,7 +241,7 @@ public extension FlexUI where Component: UIButton {
             return self
         }
 
-        let buttonCommand = ButtonCommand { [weak component] in
+        let buttonCommand = Command { [weak component] in
             if let component = component {
                 command(component)
             }
