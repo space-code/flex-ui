@@ -1,9 +1,11 @@
 //
 // flex-ui
-// Copyright © 2024 Space Code. All rights reserved.
+// Copyright © 2025 Space Code. All rights reserved.
 //
 
 import UIKit
+
+@MainActor private let kMapTable = NSMapTable<AnyObject, Command>.weakToStrongObjects()
 
 public extension FlexUI where Component: UITextField {
     /// Sets the font of the text field.
@@ -138,6 +140,55 @@ public extension FlexUI where Component: UITextField {
     func minFontSize(_ size: CGFloat) -> Self {
         component.minimumFontSize = size
         component.adjustsFontSizeToFitWidth = true
+        return self
+    }
+
+    /// Adds a command to be executed when a specified event occurs on the UIControl component.
+    /// The method is annotated with `@discardableResult` to allow the return value to be ignored,
+    /// and `@MainActor` to ensure it runs on the main thread.
+    ///
+    /// - Parameters:
+    ///   - command: A closure to be executed when the event occurs. Can be `nil`, in which case no action is added.
+    ///   - event: The `UIControl.Event` that triggers the command.
+    /// - Returns: The instance of `Self` to allow method chaining.
+    @discardableResult
+    @MainActor
+    func add(command: (() -> Void)?, event: UIControl.Event) -> Self {
+        guard let command = command else {
+            return self
+        }
+
+        let buttonCommand = Command(block: command)
+        component.removeTarget(nil, action: nil, for: event)
+        component.addTarget(buttonCommand, action: #selector(buttonCommand.action), for: event)
+        kMapTable.setObject(buttonCommand, forKey: component)
+        return self
+    }
+
+    /// Adds a command to be executed when a specified event occurs on the `UITextField` component.
+    /// The method is annotated with `@discardableResult` to allow the return value to be ignored,
+    /// and `@MainActor` to ensure it runs on the main thread.
+    ///
+    /// - Parameters:
+    ///   - command: A closure that receives the `UITextField` as a parameter when the event occurs. Can be `nil`.
+    ///   - event: The `UIControl.Event` that triggers the command.
+    /// - Returns: The instance of `Self` to allow method chaining.
+    @discardableResult
+    @MainActor
+    func add(command: ((UITextField) -> Void)?, event: UIControl.Event) -> Self {
+        guard let command = command else {
+            return self
+        }
+
+        let buttonCommand = Command { [weak component] in
+            if let component = component {
+                command(component)
+            }
+        }
+
+        component.removeTarget(nil, action: nil, for: event)
+        component.addTarget(buttonCommand, action: #selector(buttonCommand.action), for: event)
+        kMapTable.setObject(buttonCommand, forKey: component)
         return self
     }
 }
