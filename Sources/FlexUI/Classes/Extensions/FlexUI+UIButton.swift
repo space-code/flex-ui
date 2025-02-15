@@ -5,8 +5,6 @@
 
 import UIKit
 
-@MainActor private let kMapTable = NSMapTable<AnyObject, Command>.weakToStrongObjects()
-
 /// An extension to `FlexUI` that adds helper methods for configuring `UIButton` properties.
 /// These methods allow for fluent configuration of button properties such as title, image, alignment, and actions.
 public extension FlexUI where Component: UIButton {
@@ -205,51 +203,6 @@ public extension FlexUI where Component: UIButton {
     @MainActor
     func enable(_ isEnable: Bool) -> Self {
         component.isEnabled = isEnable
-        return self
-    }
-
-    /// Adds a custom command block to be executed when the button is tapped.
-    ///
-    /// - Parameters:
-    ///   - command: The closure to be executed.
-    ///   - event: The event to associate the command with (default is `.touchUpInside`).
-    /// - Returns: The current instance of `FlexUI` for further configuration.
-    @discardableResult
-    @MainActor
-    func add(command: (() -> Void)?, event: UIControl.Event = .touchUpInside) -> Self {
-        guard let command = command else {
-            return self
-        }
-
-        let buttonCommand = Command(block: command)
-        component.removeTarget(nil, action: nil, for: event)
-        component.addTarget(buttonCommand, action: #selector(buttonCommand.action), for: event)
-        kMapTable.setObject(buttonCommand, forKey: component)
-        return self
-    }
-
-    /// Adds a custom command block to be executed when the button is tapped, with access to the button itself.
-    ///
-    /// - Parameters:
-    ///   - command: The closure to be executed with the button as the parameter.
-    ///   - event: The event to associate the command with.
-    /// - Returns: The current instance of `FlexUI` for further configuration.
-    @discardableResult
-    @MainActor
-    func add(command: ((UIButton) -> Void)?, event: UIControl.Event) -> Self {
-        guard let command = command else {
-            return self
-        }
-
-        let buttonCommand = Command { [weak component] in
-            if let component = component {
-                command(component)
-            }
-        }
-
-        component.removeTarget(nil, action: nil, for: event)
-        component.addTarget(buttonCommand, action: #selector(buttonCommand.action), for: event)
-        kMapTable.setObject(buttonCommand, forKey: component)
         return self
     }
 }
