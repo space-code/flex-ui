@@ -23,7 +23,7 @@ public extension FlexUI where Component: UITextField {
     /// - Returns: The current instance of `FlexUI` for further configuration.
     @discardableResult
     @MainActor
-    func placeholder(_ placeholder: String) -> Self {
+    func placeholder(_ placeholder: String?) -> Self {
         component.placeholder = placeholder
         return self
     }
