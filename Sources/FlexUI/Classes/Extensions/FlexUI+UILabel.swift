@@ -1,6 +1,6 @@
 //
 // flex-ui
-// Copyright © 2024 Space Code. All rights reserved.
+// Copyright © 2025 Space Code. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ public extension FlexUI where Component: UILabel {
     /// - Returns: The current instance of `FlexUI` for further configuration.
     @discardableResult
     @MainActor
-    func text(_ text: String) -> Self {
+    func text(_ text: String?) -> Self {
         component.text = text
         return self
     }
