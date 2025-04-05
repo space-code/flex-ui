@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+#### Added
+- Implement setting an optional value as the UILabel's text.
+  - Added in Pull Request [#8](https://github.com/space-code/flex-ui/pull/8).
+
 #### 1.x Releases
 - `1.2.x` Releases - [1.2.0](#120)
 - `1.1.x` Releases - [1.1.0](#110)
