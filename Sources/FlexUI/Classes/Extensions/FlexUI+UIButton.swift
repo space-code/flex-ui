@@ -205,4 +205,17 @@ public extension FlexUI where Component: UIButton {
         component.isEnabled = isEnable
         return self
     }
+
+    /// Sets the image for a specific button state.
+    ///
+    /// - Parameters:
+    ///   - image: The image to set.
+    ///   - controlState: The state for which to set the background image (default is `.normal`).
+    /// - Returns: The current instance of `FlexUI` for further configuration.
+    @discardableResult
+    @MainActor
+    func setImage(_ image: UIImage, for controlState: UIControl.State = .normal) -> Self {
+        component.setImage(image, for: controlState)
+        return self
+    }
 }
