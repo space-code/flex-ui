@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 #### Added
+- Implement a new `setImage` method for the `UIButton` class.
+  - Added in Pull Request [#9](https://github.com/space-code/flex-ui/pull/9).
 - Implement setting an optional value as the UILabel's text.
   - Added in Pull Request [#8](https://github.com/space-code/flex-ui/pull/8).
 
