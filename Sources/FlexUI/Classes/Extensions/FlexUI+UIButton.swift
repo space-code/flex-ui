@@ -214,7 +214,7 @@ public extension FlexUI where Component: UIButton {
     /// - Returns: The current instance of `FlexUI` for further configuration.
     @discardableResult
     @MainActor
-    func setImage(_ image: UIImage, for controlState: UIControl.State = .normal) -> Self {
+    func setImage(_ image: UIImage?, for controlState: UIControl.State = .normal) -> Self {
         component.setImage(image, for: controlState)
         return self
     }
