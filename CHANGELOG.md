@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+#### Added
+- Update the `setImage(_:)` method signature.
+  - Added in Pull Request [#12](https://github.com/space-code/flex-ui/pull/12).
+
 #### 1.x Releases
 - `1.3.x` Releases - [1.3.0](#130)
 - `1.2.x` Releases - [1.2.0](#120)
