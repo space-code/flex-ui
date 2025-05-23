@@ -1,19 +1,21 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+#### 1.x Releases
+- `1.4.x` Releases - [1.4.0](#140)
+- `1.3.x` Releases - [1.3.0](#130)
+- `1.2.x` Releases - [1.2.0](#120)
+- `1.1.x` Releases - [1.1.0](#110)
+- `1.0.x` Releases - [1.0.0](#100)
+
+## [1.4.0](https://github.com/space-code/flex-ui/releases/tag/1.4.0)
+Released on 2025-05-23.
 
 #### Added
 - Update the `setImage(_:)` method signature.
   - Added in Pull Request [#12](https://github.com/space-code/flex-ui/pull/12).
 - Implement the `setContentHuggingPriority` & `setContentCompressionResistancePriority` methods.
   - Added in Pull Request [#13](https://github.com/space-code/flex-ui/pull/13).
-
-#### 1.x Releases
-- `1.3.x` Releases - [1.3.0](#130)
-- `1.2.x` Releases - [1.2.0](#120)
-- `1.1.x` Releases - [1.1.0](#110)
-- `1.0.x` Releases - [1.0.0](#100)
 
 ## [1.3.0](https://github.com/space-code/flex-ui/releases/tag/1.3.0)
 Released on 2025-05-08.
