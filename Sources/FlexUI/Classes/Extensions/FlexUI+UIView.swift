@@ -1,6 +1,6 @@
 //
 // flex-ui
-// Copyright © 2024 Space Code. All rights reserved.
+// Copyright © 2025 Space Code. All rights reserved.
 //
 
 import UIKit
@@ -138,6 +138,42 @@ public extension FlexUI where Component: UIView {
     @MainActor
     func alpha(_ alpha: CGFloat) -> Self {
         component.alpha = alpha
+        return self
+    }
+
+    /// Sets the content hugging priority for the specified axis.
+    /// Content hugging determines how likely the view is to shrink below its intrinsic content size.
+    /// A higher priority means the view resists growing beyond its content size.
+    ///
+    /// - Parameters:
+    ///   - priority: The priority value to set.
+    ///   - axis: The axis (`.horizontal` or `.vertical`) on which to apply the priority.
+    /// - Returns: The current instance, allowing method chaining.
+    @discardableResult
+    @MainActor
+    func setContentHuggingPriority(
+        _ priority: UILayoutPriority,
+        for axis: NSLayoutConstraint.Axis
+    ) -> Self {
+        component.setContentHuggingPriority(priority, for: axis)
+        return self
+    }
+
+    /// Sets the content compression resistance priority for the specified axis.
+    /// Compression resistance determines how likely the view is to shrink below its intrinsic content size under compression.
+    /// A higher priority means the view resists being made smaller than its content size.
+    ///
+    /// - Parameters:
+    ///   - priority: The priority value to set.
+    ///   - axis: The axis (`.horizontal` or `.vertical`) on which to apply the priority.
+    /// - Returns: The current instance, allowing method chaining.
+    @discardableResult
+    @MainActor
+    func setContentCompressionResistancePriority(
+        _ priority: UILayoutPriority,
+        for axis: NSLayoutConstraint.Axis
+    ) -> Self {
+        component.setContentCompressionResistancePriority(priority, for: axis)
         return self
     }
 }

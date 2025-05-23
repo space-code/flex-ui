@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 #### Added
 - Update the `setImage(_:)` method signature.
   - Added in Pull Request [#12](https://github.com/space-code/flex-ui/pull/12).
+- Implement the `setContentHuggingPriority` & `setContentCompressionResistancePriority` methods.
+  - Added in Pull Request [#13](https://github.com/space-code/flex-ui/pull/13).
 
 #### 1.x Releases
 - `1.3.x` Releases - [1.3.0](#130)
