@@ -20,6 +20,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#19](https://github.com/space-code/flex-ui/pull/19).
 
 ### Miscellaneous Tasks
+- Automate code formatting and linting
+  - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#32](https://github.com/space-code/flex-ui/pull/32).
+- Update the danger action
+  - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#31](https://github.com/space-code/flex-ui/pull/31).
+- Add Gemfile.lock
+  - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#30](https://github.com/space-code/flex-ui/pull/30).
 - Add conventional-pr.yml for PR validation
   - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#20](https://github.com/space-code/flex-ui/pull/20).
 - Update config
