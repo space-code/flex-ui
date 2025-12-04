@@ -18,7 +18,7 @@ public extension FlexUI where Component: UIControl {
     @discardableResult
     @MainActor
     func add(command: (() -> Void)?, event: UIControl.Event = .touchUpInside) -> Self {
-        guard let command = command else {
+        guard let command else {
             return self
         }
 
@@ -38,12 +38,12 @@ public extension FlexUI where Component: UIControl {
     @discardableResult
     @MainActor
     func add(command: ((Component) -> Void)?, event: UIControl.Event) -> Self {
-        guard let command = command else {
+        guard let command else {
             return self
         }
 
         let componentCommand = Command { [weak component] in
-            if let component = component {
+            if let component {
                 command(component)
             }
         }
