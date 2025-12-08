@@ -40,7 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Contributed by [@renovate[bot]](https://github.com/renovate[bot]) in Pull Request [#22](https://github.com/space-code/flex-ui/pull/22).
 
 ### New Contributors
-* @renovate[bot] made their first contribution in [#28](https://github.com/space-code/flex-ui/pull/28)
+* @renovate[bot] made their first contribution in [#36](https://github.com/space-code/flex-ui/pull/36)
 
 ## [1.4.0](https://github.com/space-code/flex-ui/releases/tag/1.4.0)
 
