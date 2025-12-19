@@ -22,6 +22,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#19](https://github.com/space-code/flex-ui/pull/19).
 
 ### Miscellaneous Tasks
+- Delete Mintfile
+  - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#41](https://github.com/space-code/flex-ui/pull/41).
 - Add codeowners
   - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#37](https://github.com/space-code/flex-ui/pull/37).
 - Add GitHub issue and PR templates
@@ -42,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Contributed by [@renovate[bot]](https://github.com/renovate[bot]) in Pull Request [#22](https://github.com/space-code/flex-ui/pull/22).
 
 ### New Contributors
-* @renovate[bot] made their first contribution in [#39](https://github.com/space-code/flex-ui/pull/39)
+* @renovate[bot] made their first contribution in 
 
 ## [1.4.0](https://github.com/space-code/flex-ui/releases/tag/1.4.0)
 
