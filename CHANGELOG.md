@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 ## [Unreleased]
 
+### Documentation
+- Update `README.md`
+  - Documented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#43](https://github.com/space-code/flex-ui/pull/43).
+
 ### Features
 - Add release workflow for GitHub Actions
   - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#34](https://github.com/space-code/flex-ui/pull/34).
@@ -44,7 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Contributed by [@renovate[bot]](https://github.com/renovate[bot]) in Pull Request [#22](https://github.com/space-code/flex-ui/pull/22).
 
 ### New Contributors
-* @renovate[bot] made their first contribution in [#42](https://github.com/space-code/flex-ui/pull/42)
+* @renovate[bot] made their first contribution in 
 
 ## [1.4.0](https://github.com/space-code/flex-ui/releases/tag/1.4.0)
 
