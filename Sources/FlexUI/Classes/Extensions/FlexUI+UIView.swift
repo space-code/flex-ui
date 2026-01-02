@@ -220,4 +220,15 @@ public extension FlexUI where Component: UIView {
         component.tintColor = tintColor
         return self
     }
+
+    /// Sets the tag for the view.
+    ///
+    /// - Parameter tag: An integer value identifying the view.
+    /// - Returns: The current instance, allowing method chaining.
+    @discardableResult
+    @MainActor
+    func tag(_ tag: Int) -> Self {
+        component.tag = tag
+        return self
+    }
 }
