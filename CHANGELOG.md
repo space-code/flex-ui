@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Features
+- Add fluent tag(_:) setter
+  - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#51](https://github.com/space-code/flex-ui/pull/51).
 - Add fluent tintColor setter with documentation
   - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#50](https://github.com/space-code/flex-ui/pull/50).
 - Add fluent wrapper for stack view custom spacing
