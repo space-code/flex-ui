@@ -209,4 +209,15 @@ public extension FlexUI where Component: UIView {
         views.forEach { component.addSubview($0) }
         return self
     }
+
+    /// Sets the tint color for the view.
+    ///
+    /// - Parameter tintColor: The tint color to apply to the view.
+    /// - Returns: The current instance, allowing method chaining.
+    @discardableResult
+    @MainActor
+    func tintColor(_ tintColor: UIColor) -> Self {
+        component.tintColor = tintColor
+        return self
+    }
 }
