@@ -79,4 +79,18 @@ public extension FlexUI where Component: UIStackView {
         component.directionalLayoutMargins = value
         return self
     }
+
+    /// Applies custom spacing after the specified view.
+    ///
+    /// - Parameters:
+    ///   - spacing: The spacing between views.
+    ///   - arrangedSubview: The subview after which the custom spacing should be applied.
+    ///
+    /// - Returns: The current instance of `FlexUI` for further configuration.
+    @discardableResult
+    @MainActor
+    func setCustomSpacing(_ spacing: CGFloat, after arrangedSubview: UIView) -> Self {
+        component.setCustomSpacing(spacing, after: arrangedSubview)
+        return self
+    }
 }
