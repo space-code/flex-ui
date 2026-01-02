@@ -176,4 +176,37 @@ public extension FlexUI where Component: UIView {
         component.setContentCompressionResistancePriority(priority, for: axis)
         return self
     }
+
+    /// Adds a view to the end of the receiver’s list of subviews.
+    ///
+    /// - Parameter view: The view to be added. After being added, this view appears on top of any other subviews.
+    /// - Returns: The current instance, allowing method chaining.
+    @discardableResult
+    @MainActor
+    func addSubview(_ view: UIView) -> Self {
+        component.addSubview(view)
+        return self
+    }
+
+    /// Adds an array of views to the end of the receiver’s list of subviews.
+    ///
+    /// - Parameter views: An array of views to be added.
+    /// - Returns: The current instance, allowing method chaining.
+    @discardableResult
+    @MainActor
+    func addSubviews(_ views: [UIView]) -> Self {
+        views.forEach { component.addSubview($0) }
+        return self
+    }
+
+    /// Adds multiple views as variadic parameters to the end of the receiver’s list of subviews.
+    ///
+    /// - Parameter views: A variable number of views to be added.
+    /// - Returns: The current instance, allowing method chaining.
+    @discardableResult
+    @MainActor
+    func addSubviews(_ views: UIView...) -> Self {
+        views.forEach { component.addSubview($0) }
+        return self
+    }
 }
