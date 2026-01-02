@@ -265,7 +265,7 @@ We love contributions! Please feel free to help out with this project. If you se
 Bootstrap the development environment:
 
 ```bash
-mise intall
+mise install
 ```
 
 ## Author
