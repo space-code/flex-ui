@@ -30,7 +30,7 @@ public extension FlexUI where Component: UIButton {
     /// - Returns: The current instance of `FlexUI` for further configuration.
     @discardableResult
     @MainActor
-    func title(_ title: String, for state: UIControl.State = .normal) -> Self {
+    func title(_ title: String?, for state: UIControl.State = .normal) -> Self {
         component.setTitle(title, for: state)
         return self
     }
