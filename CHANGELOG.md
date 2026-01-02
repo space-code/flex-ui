@@ -16,6 +16,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 ## [Unreleased]
 
+### Features
+- Support optional title for button
+  - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#49](https://github.com/space-code/flex-ui/pull/49).
+
 ### Miscellaneous Tasks
 - Fix a typo in README
   - Contributed by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#48](https://github.com/space-code/flex-ui/pull/48).
