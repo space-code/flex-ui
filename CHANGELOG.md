@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Features
+- Add fluent wrapper for stack view custom spacing
+  - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#47](https://github.com/space-code/flex-ui/pull/47).
+- Add fluent subview management methods
+  - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#46](https://github.com/space-code/flex-ui/pull/46).
 - Support optional title for button
   - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#49](https://github.com/space-code/flex-ui/pull/49).
 
