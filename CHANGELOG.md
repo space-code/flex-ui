@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Features
+- Add fluent wrapper for UIButton.Configuration
+  - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#53](https://github.com/space-code/flex-ui/pull/53).
 - Add fluent wrapper for UIContentUnavailableConfiguration
   - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#52](https://github.com/space-code/flex-ui/pull/52).
 - Add fluent tag(_:) setter
