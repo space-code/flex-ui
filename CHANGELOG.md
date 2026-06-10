@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 #### 1.x Releases
+- `1.6.x` Releases - [1.6.0](#160)
 - `1.5.x` Releases - [1.5.0](#150)
 - `1.4.x` Releases - [1.4.0](#140)
 - `1.3.x` Releases - [1.3.0](#130)
@@ -14,7 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `1.0.x` Releases - [1.0.0](#100)
 
 ---
-## [Unreleased]
+
+
+## [1.6.0](https://github.com/space-code/flex-ui/releases/tag/1.6.0)
+
+Released on 2026-06-10. All issues associated with this milestone can be found using this [filter](https://github.com/space-code/flex-ui/milestones?state=closed&q=1.6.0).
 
 ### Features
 - Add data source and delegate setup for collection and table views
@@ -140,7 +145,7 @@ Released on 2025-01-07. All issues associated with this milestone can be found u
 ### New Contributors
 * @dependabot[bot] made their first contribution in [#1](https://github.com/space-code/flex-ui/pull/1)
 
-[unreleased]: https://github.com/space-code/flex-ui/compare/1.5.0..HEAD
+[1.6.0]: https://github.com/space-code/flex-ui/compare/1.5.0..1.6.0
 [1.5.0]: https://github.com/space-code/flex-ui/compare/1.4.0..1.5.0
 [1.4.0]: https://github.com/space-code/flex-ui/compare/1.3.0..1.4.0
 [1.3.0]: https://github.com/space-code/flex-ui/compare/1.2.0..1.3.0
