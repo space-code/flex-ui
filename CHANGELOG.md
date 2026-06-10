@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Features
+- Add data source and delegate setup for collection and table views
+  - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#93](https://github.com/space-code/flex-ui/pull/93).
 - Add fluent wrapper for UIButton.Configuration
   - Implemented by [@ns-vasilev](https://github.com/ns-vasilev) in Pull Request [#53](https://github.com/space-code/flex-ui/pull/53).
 - Add fluent wrapper for UIContentUnavailableConfiguration
