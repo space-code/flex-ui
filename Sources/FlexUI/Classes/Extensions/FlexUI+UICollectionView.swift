@@ -140,4 +140,15 @@ public extension FlexUI where Component: UICollectionView {
         component.isPagingEnabled = isPagingEnabled
         return self
     }
+
+    /// Sets the refresh control associated with the scroll view.
+    ///
+    /// - Parameter refreshControl: The refresh control associated with the scroll view.
+    /// - Returns: The current instance of `FlexUI` for further configuration.
+    @discardableResult
+    @MainActor
+    func refreshControl(_ refreshControl: UIRefreshControl) -> Self {
+        component.refreshControl = refreshControl
+        return self
+    }
 }
