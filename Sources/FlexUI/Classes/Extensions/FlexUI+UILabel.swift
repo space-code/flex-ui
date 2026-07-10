@@ -71,4 +71,25 @@ public extension FlexUI where Component: UILabel {
         component.textAlignment = textAlignment
         return self
     }
+
+    /// A Boolean value that determines whether the label reduces the text’s font size to fit the
+    /// title string into the label’s bounding rectangle.
+    ///
+    /// - Returns: The current instance of `FlexUI` for further configuration.
+    @discardableResult
+    @MainActor
+    func adjustsFontSizeToFitWidth(_ adjustsFontSizeToFitWidth: Bool) -> Self {
+        component.adjustsFontSizeToFitWidth = adjustsFontSizeToFitWidth
+        return self
+    }
+
+    /// The minimum scale factor for the label’s text.
+    ///
+    /// - Returns: The current instance of `FlexUI` for further configuration.
+    @discardableResult
+    @MainActor
+    func minimumScaleFactor(_ minimumScaleFactor: CGFloat) -> Self {
+        component.minimumScaleFactor = minimumScaleFactor
+        return self
+    }
 }
